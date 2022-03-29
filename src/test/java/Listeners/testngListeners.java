@@ -4,7 +4,6 @@ package Listeners;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import test.captureScreenShot;
 
 import java.io.IOException;
 
@@ -13,16 +12,12 @@ import static test.BaseClass.driver;
 public class testngListeners implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("start");
+        System.out.println("Start");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        try {
-            captureScreenShot.getScreenShot(driver);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Override
